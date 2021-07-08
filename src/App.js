@@ -5,6 +5,7 @@ import ContactForm from './components/ContactForm/Form.jsx';
 import ContactList from './components/ContactList/ContactList.jsx';
 import shortid from 'shortid';
 import Filter from './components/Filter/Filter.jsx';
+import styles from './App.module.css';
 
 class App extends Component {
   state = {
@@ -58,9 +59,9 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Phonebook</h1>
+        <h1 className={styles.mainTitle}>Phonebook</h1>
         <ContactForm addContact={this.addContact} />
-        <h2>Contacts</h2>
+        <h2 className={styles.contactsTitle}>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.onFilterChange} />
         <ContactList
           contacts={filteredContacts}
