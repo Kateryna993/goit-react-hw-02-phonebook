@@ -6,7 +6,13 @@ const Filter = ({ value, onChange }) => {
   return (
     <div className={styles.filterContainer}>
       <h3>Find contacts by name</h3>
-      <input type="text" name="filter" value={value} onChange={onChange} />
+      <input
+        className={styles.filterInput}
+        type="text"
+        name="filter"
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 };

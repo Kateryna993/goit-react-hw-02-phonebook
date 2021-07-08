@@ -31,7 +31,7 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.ContactForm}>
-        <label className={styles.FormElem} htmlFor={this.nameInputId}>
+        <label className={styles.formLabel} htmlFor={this.nameInputId}>
           Name
         </label>
         <input
@@ -40,12 +40,12 @@ class ContactForm extends Component {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
-          className={styles.FormElem}
+          className={styles.formInput}
           value={this.state.name}
           onChange={this.handleChange}
           id={this.nameInputId}
         />
-        <label className={styles.FormElem} htmlFor={this.phoneInputId}>
+        <label className={styles.formLabel} htmlFor={this.phoneInputId}>
           Number
         </label>
         <input
@@ -54,7 +54,7 @@ class ContactForm extends Component {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
           required
-          className={styles.FormElem}
+          className={styles.formInput}
           value={this.state.number}
           onChange={this.handleChange}
           id={this.phoneInputId}
